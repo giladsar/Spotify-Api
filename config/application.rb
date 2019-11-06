@@ -13,6 +13,14 @@ module SpotifyApi
           generate.helper false
           generate.test_framework  :test_unit, fixture: false
         end
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :options, :patch, :delete, :head]
+      end
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
