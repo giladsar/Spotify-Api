@@ -14,6 +14,11 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'devise'
+gem 'rspotify'
+gem 'rack-cors'
+gem 'active_model_serializers'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
